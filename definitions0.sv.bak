@@ -23,7 +23,7 @@ endfunction
 
 
 // Opens both input and output files and reads first entry from input trace file
-function automatic get_first_entry(inout  input_data in_data);
+function automatic open_files(inout  input_data in_data);
 
 	$display ("in_filename %d", in_filename); 
 // Open input file for read
@@ -39,9 +39,12 @@ function automatic get_first_entry(inout  input_data in_data);
             $display("Error: Failed to open file %s", out_filename);
             //$finish;
         end
+
+	//read_from_file();
+/*
 	$fgets(line, in_file);
 	num_entries = $sscanf(line, "%d %d %d %h", in_data.cpu_cycles, in_data.core , in_data.operation, in_data.address);
-	$display ("entries %p", in_data); 
+	$display ("entries %p", in_data);  */
 	if(num_entries == 4)
 		return 1;
 	else
@@ -49,6 +52,15 @@ function automatic get_first_entry(inout  input_data in_data);
 		$display("Error: mismatched input arguments in %s", in_filename);
             	$finish;
 	end
+endfunction
+
+
+// Function for address mapping
+function automatic address_mapping (input bit [33:0]address, 
+				output add_map mapped_add);
+
+add_mapped = address;
+
 endfunction
 
 endpackage

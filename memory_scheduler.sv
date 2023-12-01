@@ -23,7 +23,7 @@ begin: while_done
 // Check CPU clock and push queue
 	if(in_data.cpu_cycles <= clock)	
 	begin : time_check
-		if(size_of_queue)
+		if(size_of_queue())
 		begin: size_of_queue
 			push_queue();
 			read_from_file();

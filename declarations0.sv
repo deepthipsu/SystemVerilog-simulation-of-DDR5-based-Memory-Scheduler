@@ -15,4 +15,63 @@ typedef struct packed {
 input_data in_data;
 
 
+bit done = 0; // done bit
+bit [63:0] clock = 0; // clock
+
+// Address Mapping
+typedef struct packed {
+		bit [33:18] row;
+		bit [17:12] col_high;
+		bit [11:10] bank;
+		bit [9:7] bank_group;
+		bit channel;
+		bit [5:2] col_low;
+		bit [1:0] byte_sel;
+		} add_map;
+
+// Timing Parameters
+typedef struct packed {
+		bit [7:0] tRC;
+		bit [7:0] tRAS;
+		bit [4:0] tRRD_L;
+		bit [4:0] tRRD_S;
+		bit [6:0] tRP;
+		bit [7:0] tRFC;
+		bit [6:0] tCWD;
+		bit [6:0] tCL;
+		bit [6:0] tRCD;
+		bit [5:0] tWR;
+		bit [5:0] tRTP;
+		bit [4:0] tCCD_L;
+		bit [4:0] tCCD_S;
+		bit [6:0] tCCD_L_WR;
+		bit [4:0] tCCD_S_WR;
+		bit [4:0] tBURST;
+		bit [5:0] tCCD_L_RTW;
+		bit [5:0] tCCD_S_RTW;
+		bit [7:0] tCCD_L_WTR;
+		bit [6:0] tCCD_S_WTR;
+		} timing_param;
+
+
+// Enum declarations for commands
+typedef enum bit [3:0] {ACT0, ACT1, RD0, RD1, WR0, WR1, PRE, REF, RBL, WBL} commands;
+typedef enum bit [1:0] {not_started, in_progress, finished} state;
+typedef enum bit [1:0] {d_read, write, i_read} oper;
+
+// Queue structure for processing
+typedef struct packed {
+		bit [63:0] cpu_cycles;
+		add_map mapped_add;	
+		commands curr_cmd;
+		commands open_cmd;
+		state    status;
+		oper operation;
+		timing_param tp;
+		} queue_structure;
+
+queue_structure queue_main [$];
+queue_structure request;
+
+
 endpackage

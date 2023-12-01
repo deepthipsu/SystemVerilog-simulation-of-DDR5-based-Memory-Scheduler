@@ -452,3 +452,22 @@ vsim -c -do "run -all" +in_file=trace1.txt memory_scheduler
 # Compile of definitions0.sv was successful.
 # Compile of memory_scheduler.sv failed with 2 errors.
 # 3 compiles, 1 failed with 2 errors.
+# Compile of declarations0.sv failed with 3 errors.
+# Compile of definitions0.sv failed with 1 errors.
+# Compile of memory_scheduler.sv failed with 4 errors.
+# 3 compiles, 3 failed with 8 errors.
+# Compile of declarations0.sv failed with 2 errors.
+# Compile of declarations0.sv was successful.
+# Compile of definitions0.sv failed with 1 errors.
+# Compile of declarations0.sv was successful.
+# Compile of definitions0.sv was successful.
+# Compile of memory_scheduler.sv failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of declarations0.sv was successful.
+# Compile of definitions0.sv was successful.
+# Compile of memory_scheduler.sv failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of declarations0.sv was successful.
+# Compile of definitions0.sv was successful.
+# Compile of memory_scheduler.sv failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.

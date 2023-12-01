@@ -54,4 +54,13 @@ function automatic open_files(inout  input_data in_data);
 	end
 endfunction
 
+
+// Function for address mapping
+function automatic address_mapping (input bit [33:0]address, 
+				output add_map mapped_add);
+
+mapped_add = address;
+
+endfunction
+
 endpackage
