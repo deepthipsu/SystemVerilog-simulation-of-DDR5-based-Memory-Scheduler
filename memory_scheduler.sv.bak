@@ -10,8 +10,24 @@ begin : initial_blk
 	get_file_names(in_filename, out_filename, debug);
 
 	// Open the file and look for first entry in input file
-	get_first_entry();
+	get_first_entry(in_data);
 	
+while (!done)
+begin: while_done
+
+	clock++;
+
+// Check CPU clock and push queue
+	if(req_time_check())	
+		push_queue();
+
+// Check for DIMM clock
+	if(!(clock%2))
+	begin : DIMM_Clk
+
+	end: DIMM_Clk
+
+end: while_done
         
 end : initial_blk
 endmodule
