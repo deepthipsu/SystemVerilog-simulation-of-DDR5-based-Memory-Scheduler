@@ -40,7 +40,7 @@ function automatic get_first_entry(inout  input_data in_data);
             //$finish;
         end
 	$fgets(line, in_file);
-	num_entries = $sscanf(line, "%d %d %d %h", in_data.cpu_cycles, , in_data.operation, in_data.address);
+	num_entries = $sscanf(line, "%d %d %d %h", in_data.cpu_cycles, in_data.core , in_data.operation, in_data.address);
 	$display ("entries %p", in_data); 
 	if(num_entries == 4)
 		return 1;

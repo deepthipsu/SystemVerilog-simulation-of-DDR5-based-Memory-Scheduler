@@ -9,8 +9,11 @@ begin : initial_blk
 	// Fetch input and output file names from command line; else default the names along with debug status
 	get_file_names(in_filename, out_filename, debug);
 
-	// Open the file and look for first entry in input file
-	get_first_entry(in_data);
+	// Open the files for read and write
+	open_files(in_data);
+
+// Read first entry from input trace file
+	read_from_file();
 	
 while (!done)
 begin: while_done
@@ -18,8 +21,14 @@ begin: while_done
 	clock++;
 
 // Check CPU clock and push queue
-	if(req_time_check())	
-		push_queue();
+	if(in_data.cpu_cycles <= clock)	
+	begin : time_check
+		if(size_of_queue)
+		begin: size_of_queue
+			push_queue();
+			read_from_file();
+		end : size_of_queue
+	end : time_check
 
 // Check for DIMM clock
 	if(!(clock%2))

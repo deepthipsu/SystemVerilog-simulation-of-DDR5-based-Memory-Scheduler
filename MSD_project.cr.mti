@@ -1,12 +1,12 @@
-N:/MSD/deepthi/MSD-final-Project/definitions0.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/definitions0.sv
+N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv {0 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv
 QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
--- Compiling package definitions0
+-- Compiling module memory_scheduler
 -- Importing package declarations0
+-- Importing package definitions0
+** Error: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(15): (vlog-2730) Undefined variable: 'done'.
+** Error: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(18): (vlog-2730) Undefined variable: 'clock'.
 
-Top level modules:
-	--none--
-
-} {} {}} N:/MSD/deepthi/MSD-final-Project/declarations0.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/declarations0.sv
+} {6.0 8.0} {}} N:/MSD/deepthi/MSD-final-Project/declarations0.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/declarations0.sv
 QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
 -- Compiling package declarations0
 
