@@ -1,0 +1,7 @@
+//To verify the Memory Scheduler is able to perform 2 writes and one read in order
+
+0	1	1	0x01FFFFC00
+2	2	1	0x01A254D11
+3	3	0	0x10FFFFE22
+4	4	1	0x012514F33
+500	5	1	0x01FFFFC40
