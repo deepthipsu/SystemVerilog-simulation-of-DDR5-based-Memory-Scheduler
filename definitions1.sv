@@ -32,7 +32,7 @@ function push_queue();
 	request.cpu_cycles = in_data.operation;
 	request.operation = in_data.operation;
 	 queue_main.push_back(request);
-            $display("[%0d] Pushed requestuest: Core %0p", clock, request);
+            $display("[%0d] Pushed request: Core %0p", clock, request);
             if (debug) begin
                 print_queue_contents(); // Print queue contents after insertion
             end         
@@ -43,9 +43,9 @@ endfunction
 int i;
         $display("Printing Queue Contents at simulation time %0d", clock);
         foreach (queue_main[i]) begin
-            $display("Queue Element %0d: Time: %0d, byte_sel: %0d, Address: %h", 
-                     i, queue_main[i].cpu_cycles); //queue_main[i].byte_sel, 
-                     //queue_main[i].address);
+            $display("Queue Element %0d: Time: %0d", 
+                     i, queue_main[i].cpu_cycles);  
+                   
         end
 endfunction
 
