@@ -1,0 +1,6 @@
+//To verify the Memory Scheduler is able to perform sequential reads and follows proper timings. When input time is at 111, it reads and issues the first command at 112. At 880, DRAM is ready for next command, bit as we received input request at 880, it will be taken up an processed at next cycle. again at 1137 input request, by 1138, previous precharge command's tRP is satisfied and ready to issue next ACT0 command.
+111	1	2	0x01FFFFC00
+112	2	2	0x01A254D11
+313	3	2	0x10FFFFE22
+880	4	2	0x012514F33
+1137	5	2	0x01FFFFC40

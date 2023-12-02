@@ -1,0 +1,10 @@
+//To verify the Memory Scheduler is able to perform 2 simultaneous reads and one write. Here the cases considered are 2 consecutive reads to same address followed a write to different one at a very later time. After this 2 reads and one write to same address at immediate clock tick. Then 2 different reads (inst fetch and data read) for 2 different addresses followed by a write to a different address
+1	1	0	0x01FFFFC00
+2	2	0	0x01FFFFC00
+3000	3	1	0x10FFFFE22
+4000	4	2	0x012514F33
+4001	5	2	0x012514F33
+4002	1	1	0x012514F33
+4003	2	0	0x01A254D11
+4004	3	2	0x01FFFFC40
+4005	4	1	0x01FFFFC00
