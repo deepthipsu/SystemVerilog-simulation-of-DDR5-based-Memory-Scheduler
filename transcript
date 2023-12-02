@@ -10,3 +10,21 @@
 # Compile of definitions0.sv was successful.
 # Compile of memory_scheduler.sv failed with 1 errors.
 # 5 compiles, 1 failed with 1 error.
+# Compile of declarations1.sv was successful.
+# Compile of definitions1.sv failed with 3 errors.
+# Compile of declarations0.sv was successful.
+# Compile of definitions0.sv was successful.
+# Compile of memory_scheduler.sv failed with 1 errors.
+# 5 compiles, 2 failed with 4 errors.
+# Compile of definitions1.sv failed with 3 errors.
+# Compile of definitions1.sv failed with 9 errors.
+# Compile of definitions1.sv failed with 9 errors.
+# Compile of definitions1.sv failed with 4 errors.
+# Compile of definitions1.sv failed with 2 errors.
+# Compile of definitions1.sv was successful with warnings.
+# Compile of declarations1.sv was successful.
+# Compile of definitions1.sv was successful with warnings.
+# Compile of declarations0.sv was successful.
+# Compile of definitions0.sv was successful.
+# Compile of memory_scheduler.sv failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
