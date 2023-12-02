@@ -3,6 +3,7 @@
 package definitions0;
 
 import declarations0::*;
+import declarations1::*;
 
 // Function to fetch input and output file names and debug status from command line; set to default if not available
 function automatic get_file_names(inout string in_filename, string out_filename, bit[1:0] debug);
@@ -25,7 +26,6 @@ endfunction
 // Opens both input and output files and reads first entry from input trace file
 function automatic open_files(inout  input_data in_data);
 
-	$display ("in_filename %d", in_filename); 
 // Open input file for read
 	in_file = $fopen(in_filename, "r");
         if (in_file == 0) begin
@@ -44,14 +44,15 @@ function automatic open_files(inout  input_data in_data);
 /*
 	$fgets(line, in_file);
 	num_entries = $sscanf(line, "%d %d %d %h", in_data.cpu_cycles, in_data.core , in_data.operation, in_data.address);
-	$display ("entries %p", in_data);  */
+	$display ("entries %p", in_data); 
 	if(num_entries == 4)
 		return 1;
 	else
 	begin
 		$display("Error: mismatched input arguments in %s", in_filename);
             	$finish;
-	end
+	end*/
+
 endfunction
 
 
@@ -60,6 +61,10 @@ function automatic address_mapping (input bit [33:0]address,
 				output add_map mapped_add);
 
 mapped_add = address;
+if(debug == 1)
+begin
+$display("address %h, mapped add %p", address, mapped_add);
+end
 
 endfunction
 

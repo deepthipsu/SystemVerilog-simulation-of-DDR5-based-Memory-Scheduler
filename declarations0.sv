@@ -4,6 +4,8 @@ string in_filename, out_filename, line;
 int in_file, out_file, num_entries;
 bit[1:0] debug ;
 
+bit [1:0] test = 0;
+
 // Input file format
 typedef struct packed {
 		bit [63:0] cpu_cycles;
@@ -17,6 +19,7 @@ input_data in_data;
 
 bit done = 0; // done bit
 bit [63:0] clock = 0; // clock
+bit request_pending = 0;
 
 // Address Mapping
 typedef struct packed {
@@ -55,7 +58,7 @@ typedef struct packed {
 
 
 // Enum declarations for commands
-typedef enum bit [3:0] {ACT0, ACT1, RD0, RD1, WR0, WR1, PRE, REF, RBL, WBL} commands;
+typedef enum bit [3:0] {NULL, ACT0, ACT1, RD0, RD1, WR0, WR1, PRE, REF, RBL, WBL} commands;
 typedef enum bit [1:0] {not_started, in_progress, finished} state;
 typedef enum bit [1:0] {d_read, write, i_read} oper;
 
