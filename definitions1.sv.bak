@@ -3,6 +3,7 @@ package definitions1;
 
 import declarations0::*;
 import declarations1::*;
+import definitions0::*;
 
 
 // reads the lines of the input file
@@ -43,7 +44,7 @@ int i;
         $display("Printing Queue Contents at simulation time %0d", clock);
         foreach (queue_main[i]) begin
             $display("Queue Element %0d: Time: %0d, byte_sel: %0d, Address: %h", 
-                     i, queue_main[i].clock_cycles); //queue_main[i].byte_sel, 
+                     i, queue_main[i].cpu_cycles); //queue_main[i].byte_sel, 
                      //queue_main[i].address);
         end
 endfunction

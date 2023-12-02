@@ -32,7 +32,7 @@ function push_queue();
 	request.cpu_cycles = in_data.operation;
 	request.operation = in_data.operation;
 	 queue_main.push_back(request);
-            $display("[%0d] Pushed requestuest: Time %0d, Core %0p", clock, request);
+            $display("[%0d] Pushed requestuest: Core %0p", clock, request);
             if (debug) begin
                 print_queue_contents(); // Print queue contents after insertion
             end         
