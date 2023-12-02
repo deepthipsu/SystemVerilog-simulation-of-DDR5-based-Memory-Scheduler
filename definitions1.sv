@@ -39,7 +39,7 @@ function push_queue();
 	request.cpu_cycles = in_data.operation;
 	request.operation = in_data.operation;
 	 queue_main.push_back(request);
-	request_pending == 0;
+	request_pending =0;
             $display("[%0d] Pushed request: Core %0p", clock, request);
             if (debug) begin
                 print_queue_contents(); // Print queue contents after insertion
@@ -58,13 +58,18 @@ int i;
 endfunction
 
 // Task to get next command
-/*function next_command (inout queue_structure queue_line);
+function next_command (inout queue_structure queue_line);
   unique case(curr_cmd)
 	ACT0: begin 
-	  curr_cmd = ACT1; row_col = 0;
-	  assign 
-	 end
-	ACT1: begin curr_cmd = (operation == 1)? WR0 : RD0; row_col = 1; end
+	       curr_cmd = ACT1; row_col = 0;
+	      end
+	ACT1: begin 
+		curr_cmd = (operation == 1)? WR0 : RD0; row_col = 1; 
+		
+		end
+
+
+
 	RD0: begin curr_cmd = RD1; row_col = 1; end
 	RD1: begin curr_cmd = PRE; row_col = 'x; end
 	WR0: begin curr_cmd = WR1; row_col = 1; end
@@ -75,6 +80,6 @@ default : begin curr_cmd = ACT0;status = in_progress;row_col = 0; end
 endcase
 
 endfunction
-*/
+
 
 endpackage
