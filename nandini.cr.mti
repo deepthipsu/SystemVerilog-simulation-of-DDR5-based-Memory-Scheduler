@@ -7,22 +7,7 @@ QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
 ** Warning: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(13): (vlog-2240) Treating stand-alone use of function 'open_files' as an implicit VOID cast.
 ** Error: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(26): 'size_of_queue' is not a function name.
 
-} {8.0 9.0} {}} N:/MSD/Nandini/MSD-final-Project/declarations1.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/Nandini/MSD-final-Project/declarations1.sv
-QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
--- Compiling package declarations1
-
-Top level modules:
-	--none--
-
-} {} {}} N:/MSD/deepthi/MSD-final-Project/definitions0.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/definitions0.sv
-QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
--- Compiling package definitions0
--- Importing package declarations0
-
-Top level modules:
-	--none--
-
-} {} {}} N:/MSD/deepthi/MSD-final-Project/declarations0.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/declarations0.sv
+} {8.0 9.0} {}} N:/MSD/deepthi/MSD-final-Project/declarations0.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/declarations0.sv
 QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
 -- Compiling package declarations0
 
