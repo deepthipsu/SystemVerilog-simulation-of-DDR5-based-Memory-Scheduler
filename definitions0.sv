@@ -6,58 +6,56 @@ import declarations0::*;
 import declarations1::*;
 
 // Function to fetch input and output file names and debug status from command line; set to default if not available
-function automatic get_file_names(inout string in_filename, string out_filename, bit[1:0] debug);
+function get_file_names(inout string in_filename, string out_filename, bit[1:0] debug);
 
-	if (!$value$plusargs("debug=%d", debug)) begin
+	if (!$value$plusargs("debug=%d", debug)) 
+	begin
             debug = 0;  // Default to no debug mode
         end
 
-        if (!$value$plusargs("in_file=%s", in_filename)) begin
+        if (!$value$plusargs("in_file=%s", in_filename)) 
+	begin
             in_filename = "trace.txt";  // Default filename
         end
 
-	if (!$value$plusargs("out_file=%s", out_filename)) begin
+	if (!$value$plusargs("out_file=%s", out_filename)) 
+	begin
             out_filename = "dram.txt";  // Default filename
         end
-
+	return 1;
 endfunction
 
 
 // Opens both input and output files and reads first entry from input trace file
-function automatic open_files(inout  input_data in_data);
+function open_files(inout  input_data in_data);
 
 // Open input file for read
 	in_file = $fopen(in_filename, "r");
-        if (in_file == 0) begin
-            $display("Error: Failed to open file %s", in_filename);
-            //$finish;
-        end
+        if (in_file == 0) 
+	begin
+            	$display("Error: Failed to open file %s", in_filename);
+            	//$finish;
+		return 0;
+	end
+	else 
+		return 1;
 
 // Open output file for write
 	out_file=$fopen(out_filename,"w");
-	if (out_file == 0) begin
-            $display("Error: Failed to open file %s", out_filename);
-            //$finish;
-        end
-
-	//read_from_file();
-/*
-	$fgets(line, in_file);
-	num_entries = $sscanf(line, "%d %d %d %h", in_data.cpu_cycles, in_data.core , in_data.operation, in_data.address);
-	$display ("entries %p", in_data); 
-	if(num_entries == 4)
-		return 1;
-	else
+	if (out_file == 0) 
 	begin
-		$display("Error: mismatched input arguments in %s", in_filename);
-            	$finish;
-	end*/
+            	$display("Error: Failed to open file %s", out_filename);
+            	//$finish;
+		return 0;
+	end
+	else 
+		return 1;
 
 endfunction
 
 
 // Function for address mapping
-function automatic address_mapping (input bit [33:0]address, 
+function address_mapping (input bit [33:0]address, 
 				output add_map mapped_add);
 
 mapped_add = address;
@@ -65,6 +63,37 @@ if(debug == 1)
 begin
 $display("address %h, mapped add %p", address, mapped_add);
 end
+
+endfunction
+
+// Pop processed entries from queue
+function pop_queue();
+queue_main.pop_front();
+endfunction
+
+// Function to add entries to output file
+function out_file_upd(input queue_structure o, input bit [63:0] clock);
+
+// out_file=$fopen("dram.txt","w");
+$fwrite(out_file, " %d\t%d\t%p\t%p\t%p\t", clock, o.mapped_add.channel, o.curr_cmd, o.mapped_add.bank_group, o.mapped_add.bank);   
+if(o.curr_cmd == PRE)
+begin : none
+$fwrite(out_file, " \n");
+end : none
+else if(o.curr_cmd == ACT0 || o.curr_cmd == ACT1)
+begin : row
+$fwrite(out_file, " %h\n", o.mapped_add.row);  
+end : row
+else
+begin : col
+$fwrite(out_file, " %h\n", {o.mapped_add.col_high, o.mapped_add.col_low});  
+end : col
+
+endfunction
+
+function close_out_file();
+
+$fclose(out_file);
 
 endfunction
 
