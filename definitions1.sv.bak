@@ -34,17 +34,18 @@ endfunction
 
 // Pushing into queue
 
-function push_queue();
+/*function push_queue();
 	address_mapping(in_data.address, request.mapped_add); 
 	request.cpu_cycles = in_data.operation;
 	request.operation = in_data.operation;
 	 queue_main.push_back(request);
-	request_pending == 0;
+	request_pending =0;
             $display("[%0d] Pushed request: Core %0p", clock, request);
             if (debug) begin
                 print_queue_contents(); // Print queue contents after insertion
             end         
 endfunction
+*/
 
 // display contents of queue
  function print_queue_contents();

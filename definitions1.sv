@@ -58,7 +58,7 @@ int i;
 endfunction
 
 // Task to get next command
-function next_command (inout queue_structure queue_line);
+/*function next_command (inout queue_structure queue_line);
   unique case(curr_cmd)
 	ACT0: begin 
 	       curr_cmd = ACT1; row_col = 0;
@@ -80,6 +80,7 @@ default : begin curr_cmd = ACT0;status = in_progress;row_col = 0; end
 endcase
 
 endfunction
+*/
 
 
 endpackage
