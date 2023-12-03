@@ -9,20 +9,26 @@ QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
 ** Warning: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(44): (vlog-2240) Treating stand-alone use of function 'read_from_file' as an implicit VOID cast.
 ** Warning: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(55): (vlog-2240) Treating stand-alone use of function 'open_command' as an implicit VOID cast.
 ** Warning: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(60): (vlog-2240) Treating stand-alone use of function 'open_command' as an implicit VOID cast.
-** Warning: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(63): (vlog-2240) Treating stand-alone use of function 'out_file_upd' as an implicit VOID cast.
-** Warning: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(75): (vlog-2240) Treating stand-alone use of function 'pop_queue' as an implicit VOID cast.
-** Warning: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(80): (vlog-2240) Treating stand-alone use of function 'close_files' as an implicit VOID cast.
 ** Warning: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(86): (vlog-2240) Treating stand-alone use of function 'update_counters' as an implicit VOID cast.
 
 Top level modules:
 	memory_scheduler
 
-} {} {}} N:/MSD/deepthi/MSD-final-Project/definitions0.sv {2 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/definitions0.sv
+} {} {}} N:/MSD/nandini/MSD-final-Project/definitions1.sv {2 {vlog -work work -vopt -sv -stats=none N:/MSD/nandini/MSD-final-Project/definitions1.sv
 QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
--- Compiling package definitions0
+-- Compiling package definitions1
 -- Importing package declarations0
 -- Importing package declarations1
-** Warning: N:/MSD/deepthi/MSD-final-Project/definitions0.sv(73): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+-- Importing package definitions0
+** Warning: N:/MSD/nandini/MSD-final-Project/definitions1.sv(41): (vlog-8386) An enum variable 'request.operation' of type 'oper' may only be assigned the same enum typed variable or one of its values. Value 'in_data.operation' requires an explicit cast.
+** Warning: N:/MSD/nandini/MSD-final-Project/definitions1.sv(46): (vlog-2240) Treating stand-alone use of function 'print_queue_contents' as an implicit VOID cast.
+
+Top level modules:
+	--none--
+
+} {} {}} N:/MSD/nandini/MSD-final-Project/declarations1.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/nandini/MSD-final-Project/declarations1.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package declarations1
 
 Top level modules:
 	--none--
@@ -33,19 +39,5 @@ QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
 
 Top level modules:
 	test
-
-} {} {}} N:/MSD/nandini/MSD-final-Project/declarations1.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/nandini/MSD-final-Project/declarations1.sv
-QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
--- Compiling package declarations1
-
-Top level modules:
-	--none--
-
-} {} {}} N:/MSD/deepthi/MSD-final-Project/declarations0.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/declarations0.sv
-QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
--- Compiling package declarations0
-
-Top level modules:
-	--none--
 
 } {} {}}

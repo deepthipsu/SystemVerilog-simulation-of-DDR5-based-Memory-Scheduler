@@ -2,7 +2,7 @@ package declarations0;
 
 string in_filename, out_filename, line;
 int in_file, out_file, num_entries;
-bit[1:0] debug ;
+bit[2:0] debug ;
 
 bit [1:0] test = 0;
 
@@ -23,12 +23,12 @@ bit request_pending = 0;
 
 // Address Mapping
 typedef struct packed {
-		bit [33:18] row;
-		bit [17:12] col_high;
-		bit [11:10] bank;
-		bit [9:7] bank_group;
+		bit [15:0] row;
+		bit [5:0] col_high;
+		bit [1:0] bank;
+		bit [2:0] bank_group;
 		bit channel;
-		bit [5:2] col_low;
+		bit [3:0] col_low;
 		bit [1:0] byte_sel;
 		} add_map;
 
@@ -75,6 +75,6 @@ typedef struct packed {
 
 queue_structure queue_main [$];
 queue_structure request;
-
+queue_structure queue_pop_entry;
 
 endpackage

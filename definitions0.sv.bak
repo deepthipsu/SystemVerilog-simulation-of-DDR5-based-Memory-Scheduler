@@ -53,30 +53,35 @@ endfunction
 
 
 // Function for address mapping
-function address_mapping (input bit [33:0]address, 
+function void address_mapping (input bit [33:0]address, 
 				output add_map mapped_add);
 
 mapped_add = address;
+
 if(debug == 1)
 begin
-$display("address %h, mapped add %p", address, mapped_add);
+	$display("address %h, mapped add %p", address, mapped_add);
 end
 
 endfunction
 
+
 // Pop processed entries from queue
-function pop_queue();
+function void pop_queue();
 if(queue_main[0].status == processed)
 begin
 	if (!(&queue_main[0].tp))
 	begin
-		queue_main.pop_front();
+		queue_pop_entry = queue_main.pop_front();
+		if(debug)
+			$display("Deleted entry from queue - %p", queue_pop_entry);
 	end
 end
 endfunction
 
+
 // Function to add entries to output file
-function out_file_upd(input queue_structure o, input bit [63:0] clock);
+function void out_file_upd(input queue_structure o, input bit [63:0] clock);
 
 // out_file=$fopen("dram.txt","w");
 $fwrite(out_file, " %d\t%d\t%p\t%p\t%p\t", clock, o.mapped_add.channel, o.curr_cmd, o.mapped_add.bank_group, o.mapped_add.bank);   
@@ -95,9 +100,10 @@ end : col
 
 endfunction
 
-function close_out_file();
+function void close_files();
 
 $fclose(out_file);
+$fclose(in_file);
 
 endfunction
 
