@@ -1,6 +1,5 @@
-//To verify the Memory Scheduler is able to process the sequential requests which are to the different Column, Bank and Bank Group with same Row
-1	1	0	0x01FFFFC00
-2	2	1	0x01FFFA252
-3	3	2	0x01FFF0182
-4	4	0	0x01FFF054C
-5	5	1	0x01FFFB211
+1	1	0	01FFFFC00
+2	2	1	01FFFA252
+3	3	2	01FFF0182
+4	4	0	01FFF054C
+5	5	1	01FFFB211
