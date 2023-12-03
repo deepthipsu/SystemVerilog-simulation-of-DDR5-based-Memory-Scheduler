@@ -58,7 +58,7 @@ function void address_mapping (input bit [33:0]address,
 
 mapped_add = address;
 
-if(debug == 'd5)
+if(debug == 5)
 begin
 	$display("address %h, mapped add %p", address, mapped_add);
 end

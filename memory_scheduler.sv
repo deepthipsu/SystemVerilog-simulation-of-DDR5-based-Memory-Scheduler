@@ -71,7 +71,7 @@ begin: while_done
 	end : time_check
 
 	// check and delete finished items from queue
-	//if (queue_main[0].status == finished)
+	if (queue_main.size() > 0)
 		pop_queue();
 
 	// Setting done bit at the end of simulation	
