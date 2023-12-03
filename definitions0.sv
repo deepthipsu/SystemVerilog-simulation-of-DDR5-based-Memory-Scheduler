@@ -37,8 +37,6 @@ function open_files(inout  input_data in_data);
             	//$finish;
 		return 0;
 	end
-	else 
-		return 1;
 
 // Open output file for write
 	out_file=$fopen(out_filename,"w");
@@ -48,7 +46,7 @@ function open_files(inout  input_data in_data);
             	//$finish;
 		return 0;
 	end
-	else 
+
 		return 1;
 
 endfunction
@@ -68,7 +66,13 @@ endfunction
 
 // Pop processed entries from queue
 function pop_queue();
-queue_main.pop_front();
+if(queue_main[0].status == processed)
+begin
+	if (!(&queue_main[0].tp))
+	begin
+		queue_main.pop_front();
+	end
+end
 endfunction
 
 // Function to add entries to output file
@@ -91,9 +95,10 @@ end : col
 
 endfunction
 
-function close_out_file();
+function close_files();
 
 $fclose(out_file);
+$fclose(in_file);
 
 endfunction
 

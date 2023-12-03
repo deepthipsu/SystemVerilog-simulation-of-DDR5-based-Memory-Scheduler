@@ -59,7 +59,7 @@ typedef struct packed {
 
 // Enum declarations for commands
 typedef enum bit [3:0] {NULL, ACT0, ACT1, RD0, RD1, WR0, WR1, PRE, REF, RBL, WBL, WR} commands;
-typedef enum bit [1:0] {not_started, in_progress, finished, hold} state;
+typedef enum bit [1:0] {not_started, in_progress, processed, hold} state;
 typedef enum bit [1:0] {d_read, write, i_read} oper;
 
 // Queue structure for processing
