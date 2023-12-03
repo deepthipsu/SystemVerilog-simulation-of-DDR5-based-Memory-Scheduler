@@ -41,7 +41,7 @@ function void push_queue();
 	request.operation = in_data.operation;
 	queue_main.push_back(request);
 	request_pending =0;
-            if (debug) begin
+            if (debug == 'd4) begin
 		$display("[%0d] Pushed request: Core %0p", clock, request);
                 print_queue_contents(); // Print queue contents after insertion
             end         
@@ -213,7 +213,7 @@ function void update_counters();
 	queue_main[0].tp.tCCD_L_WTR = (queue_main[0].tp.tCCD_L_WTR == 0)?  queue_main[0].tp.tCCD_L_WTR: queue_main[0].tp.tCCD_L_WTR-1;
 	queue_main[0].tp.tCCD_S_WTR = (queue_main[0].tp.tCCD_S_WTR == 0)?  queue_main[0].tp.tCCD_S_WTR: queue_main[0].tp.tCCD_S_WTR-1;
 
-if(debug)
+if(debug == 1)
 	$display("next cycle: clock - %d \n queue_main[0], %p", clock, queue_main[0]);
 
 endfunction
