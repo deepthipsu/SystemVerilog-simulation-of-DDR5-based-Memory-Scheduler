@@ -19,13 +19,6 @@ QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
 Top level modules:
 	--none--
 
-} {} {}} N:/MSD/Nandini/MSD-final-Project/declarations1.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/Nandini/MSD-final-Project/declarations1.sv
-QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
--- Compiling package declarations1
-
-Top level modules:
-	--none--
-
 } {} {}} N:/MSD/deepthi/MSD-final-Project/declarations0.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/declarations0.sv
 QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
 -- Compiling package declarations0
