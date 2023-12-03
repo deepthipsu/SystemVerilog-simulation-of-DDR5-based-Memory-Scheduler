@@ -41,7 +41,7 @@ function void push_queue();
 	request.operation = in_data.operation;
 	queue_main.push_back(request);
 	request_pending =0;
-            if (debug == 4) begin
+            if (debug == 'd4) begin
 		$display("[%0d] Pushed request: Core %0p", clock, request);
                 print_queue_contents(); // Print queue contents after insertion
             end         

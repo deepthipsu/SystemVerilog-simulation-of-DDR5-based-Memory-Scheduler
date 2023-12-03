@@ -1,61 +1,36 @@
-N:/MSD/Nandini/MSD-final-Project/definitions1.sv {0 {vlog -work work -vopt -sv -stats=none {N:\MSD\Nandini\MSD-final-Project\definitions1.sv}
+N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv {2 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv
 QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
--- Compiling package definitions1
+-- Compiling module memory_scheduler
+-- Importing package declarations0
+-- Importing package definitions0
+-- Importing package declarations1
+-- Importing package definitions1
+** Warning: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(69): (vlog-2240) Treating stand-alone use of function 'read_from_file' as an implicit VOID cast.
+
+Top level modules:
+	memory_scheduler
+
+} {} {}} N:/MSD/deepthi/MSD-final-Project/definitions0.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/definitions0.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package definitions0
 -- Importing package declarations0
 -- Importing package declarations1
--- Importing package definitions0
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(14): (vlog-2730) Undefined variable: 'request_pending'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(27): (vlog-2730) Undefined variable: 'request_pending'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(42): (vlog-2730) Undefined variable: 'request_pending'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(62): (vlog-2730) Undefined variable: 'tCL'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(64): (vlog-2730) Undefined variable: 'tBURST'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(75): (vlog-2730) Undefined variable: 'tWR'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(76): (vlog-2730) Undefined variable: 'WR'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(88): (vlog-2730) Undefined variable: 'tRC'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(89): (vlog-2730) Undefined variable: 'tRAS'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(90): (vlog-2730) Undefined variable: 'tRRD_L'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(91): (vlog-2730) Undefined variable: 'tRRD_S'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(92): (vlog-2730) Undefined variable: 'tRCD'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(95): (vlog-2730) Undefined variable: 'tRCD'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(96): (vlog-2730) Undefined variable: 'operation'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(102): (vlog-2730) Undefined variable: 'tCL'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(103): (vlog-2730) Undefined variable: 'tRTP'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(104): (vlog-2730) Undefined variable: 'tCCD_L'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(105): (vlog-2730) Undefined variable: 'tCCD_S'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(106): (vlog-2730) Undefined variable: 'tCCD_L_RTW'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(107): (vlog-2730) Undefined variable: 'tCCD_S_RTW'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(112): (vlog-2730) Undefined variable: 'tRP'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(117): (vlog-2730) Undefined variable: 'tCWD'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(118): (vlog-2730) Undefined variable: 'tCCD_L_WR'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(119): (vlog-2730) Undefined variable: 'tCCD_S_WR'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(120): (vlog-2730) Undefined variable: 'tCCD_L_WTR'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(121): (vlog-2730) Undefined variable: 'tCCD_S_WTR'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(124): (vlog-2730) Undefined variable: 'tCWD'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(126): (vlog-2730) Undefined variable: 'tBURST'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(127): (vlog-2730) Undefined variable: 'hold'.
-** Error: N:\MSD\Nandini\MSD-final-Project\definitions1.sv(135): (vlog-2730) Undefined variable: 'tRP'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(135): near "=": syntax error, unexpected '=', expecting ++ or --.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(143): near "default": syntax error, unexpected default.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(148): near "end": syntax error, unexpected end.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(155): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(156): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(157): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(158): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(159): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(160): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(161): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(162): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(163): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(164): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(165): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(166): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(167): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(168): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(169): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(170): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(171): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(172): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(173): near ":": syntax error, unexpected ':'.
-** Error: (vlog-13069) N:\MSD\Nandini\MSD-final-Project\definitions1.sv(174): near ":": syntax error, unexpected ':'.
 
-} {7.0 60.0} {}}
+Top level modules:
+	--none--
+
+} {} {}} N:/MSD/Nandini/MSD-final-Project/declarations1.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/Nandini/MSD-final-Project/declarations1.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package declarations1
+
+Top level modules:
+	--none--
+
+} {} {}} N:/MSD/deepthi/MSD-final-Project/declarations0.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/declarations0.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package declarations0
+
+Top level modules:
+	--none--
+
+} {} {}}
