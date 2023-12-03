@@ -119,7 +119,7 @@ function next_command (inout queue_structure queue_line);
 	end
 	
 	RD1: begin 
-		if(queue_line.tp.tRTP==0) begin
+		if(queue_line.tp.tRTP==0&&queue_line.tp.tRAS==0) begin
 		 	queue_line.curr_cmd = PRE; 
 		 	queue_line.tp.tRP=tRP;
 			queue_line.open_cmd = RD1; 
