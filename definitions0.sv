@@ -58,7 +58,7 @@ function void address_mapping (input bit [33:0]address,
 
 mapped_add = address;
 
-if(debug == 1)
+if(debug == 'd5)
 begin
 	$display("address %h, mapped add %p", address, mapped_add);
 end
@@ -70,11 +70,14 @@ endfunction
 function void pop_queue();
 if(queue_main[0].status == processed)
 begin
-	if (!(&queue_main[0].tp))
+	if (!(|queue_main[0].tp))
 	begin
 		queue_pop_entry = queue_main.pop_front();
 		if(debug == 3)
-			$display("Deleted entry from queue - %p", queue_pop_entry);
+		begin
+			$display(" queue_main[0].tp = %p", &queue_main[0].tp);
+			$display("clock - %d , Deleted entry from queue - %p", clock, queue_pop_entry);
+		end
 	end
 end
 endfunction

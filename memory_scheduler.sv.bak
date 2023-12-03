@@ -35,16 +35,6 @@ begin : initial_blk
 while (!done)
 begin: while_done
 
-	// Check CPU clock and push queue
-	if(in_data.cpu_cycles <= clock)	
-	begin : time_check
-		if(size_queue())
-		begin: size_of_queue
-			push_queue();
-			read_from_file(in_filename);
-		end : size_of_queue
-	end : time_check
-
 	// Check for DIMM clock 
 	if(!(clock%2))
 	begin : DIMM_Clk
@@ -70,6 +60,16 @@ begin: while_done
 		end : normal_process
 	end: DIMM_Clk 
 
+	// Check CPU clock and push queue
+	if(in_data.cpu_cycles <= clock)	
+	begin : time_check
+		if(size_queue())
+		begin: size_of_queue
+			push_queue();
+			read_from_file(in_filename);
+		end : size_of_queue
+	end : time_check
+
 	// check and delete finished items from queue
 	//if (queue_main[0].status == finished)
 		pop_queue();
@@ -87,7 +87,7 @@ begin: while_done
 
 end: while_done
         
-$display("End of simulation of %s", );
+$display("End of simulation of %s", in_filename);
 
 end : initial_blk
 endmodule
