@@ -35,7 +35,7 @@ endfunction
 
 // Pushing into queue
 
-function push_queue();
+function void push_queue();
 	address_mapping(in_data.address, request.mapped_add); 
 	request.cpu_cycles = in_data.operation;
 	request.operation = in_data.operation;
@@ -48,7 +48,7 @@ function push_queue();
 endfunction
 
 // display contents of queue
-function print_queue_contents();
+function void print_queue_contents();
   int i;
         $display("Printing Queue Contents at simulation time %0d", clock);
         foreach (queue_main[i]) begin
@@ -57,7 +57,7 @@ function print_queue_contents();
 endfunction
 
 //Function for open command 
-function open_command(inout queue_structure queue_line);
+function void open_command(inout queue_structure queue_line);
   case(queue_line.open_cmd)
 	RD1: begin
 		if(queue_line.tp.tCL==0) begin
@@ -190,7 +190,7 @@ function next_command (inout queue_structure queue_line);
 endfunction
 
 // Function for update counter 
-function update_counters();
+function void update_counters();
   clock++;
 	queue_main[0].tp.tRC = (queue_main[0].tp.tRC == 0)?  queue_main[0].tp.tRC: queue_main[0].tp.tRC - 1;
 	queue_main[0].tp.tRAS = (queue_main[0].tp.tRAS == 0)? queue_main[0].tp.tRAS : queue_main[0].tp.tRAS-1;

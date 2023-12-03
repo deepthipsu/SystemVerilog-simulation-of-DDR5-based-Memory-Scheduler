@@ -1,169 +1,28 @@
-couldn't open "transcript": permission denied
-# Reading pref.tcl
-# //  Questa Sim-64
-# //  Version 2023.3 win64 Jul 17 2023
-# //
-# //  Copyright 1991-2023 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  QuestaSim and its associated documentation contain trade
-# //  secrets and commercial or financial information that are the property of
-# //  Mentor Graphics Corporation and are privileged, confidential,
-# //  and exempt from disclosure under the Freedom of Information Act,
-# //  5 U.S.C. Section 552. Furthermore, this information
-# //  is prohibited from disclosure under the Trade Secrets Act,
-# //  18 U.S.C. Section 1905.
-# //
-# Loading project msd2
-# reading C:/questasim64_2023.3/win64/../modelsim.ini
-# Loading project MSD_project
-# reading C:/questasim64_2023.3/win64/../modelsim.ini
-# Loading project nandini
 # Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 3 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 2 failed with 4 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 2 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 2 failed with 3 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 2 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 2 failed with 3 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 2 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 2 failed with 3 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 2 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 2 failed with 3 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 2 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 2 failed with 3 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 2 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 2 failed with 3 errors.
-# Compile of definitions1.sv failed with 2 errors.
-# Compile of definitions1.sv failed with 2 errors.
-# reading C:/questasim64_2023.3/win64/../modelsim.ini
-# Loading project nandini
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 2 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 2 failed with 3 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv was successful.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 1 failed with 1 error.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 3 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 2 failed with 4 errors.
-# Compile of definitions1.sv failed with 3 errors.
-# Compile of definitions1.sv failed with 9 errors.
-# Compile of definitions1.sv failed with 9 errors.
-# Compile of definitions1.sv failed with 4 errors.
-# Compile of definitions1.sv failed with 2 errors.
-# Compile of definitions1.sv was successful with warnings.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv was successful with warnings.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 1 failed with 1 error.
-# Compile of definitions1.sv was successful with warnings.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv was successful with warnings.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 1 failed with 1 error.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv was successful with warnings.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv failed with 1 errors.
-# 5 compiles, 1 failed with 1 error.
-# Compile of definitions1.sv failed with 17 errors.
 # Compile of definitions1.sv failed with 6 errors.
-error writing "file183cf7e0": no such file or directory
-# Compile of definitions1.sv failed with 53 errors.
-# Compile of definitions1.sv failed with 53 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 29 errors.
 # Compile of declarations0.sv was successful.
 # Compile of definitions0.sv was successful.
 # Compile of memory_scheduler.sv was successful with warnings.
-# 5 compiles, 1 failed with 29 errors.
+# 5 compiles, 1 failed with 6 errors.
 # Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 26 errors.
+# Compile of definitions1.sv was successful with warnings.
 # Compile of declarations0.sv was successful.
 # Compile of definitions0.sv was successful.
 # Compile of memory_scheduler.sv was successful with warnings.
-# 5 compiles, 1 failed with 26 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 26 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv was successful with warnings.
-# 5 compiles, 1 failed with 26 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 26 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv was successful with warnings.
-# 5 compiles, 1 failed with 26 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 22 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv was successful with warnings.
-# 5 compiles, 1 failed with 22 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 23 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv was successful with warnings.
-# 5 compiles, 1 failed with 23 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 3 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv was successful with warnings.
-# 5 compiles, 1 failed with 3 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 4 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv was successful with warnings.
-# 5 compiles, 1 failed with 4 errors.
-# Compile of declarations1.sv was successful.
-# Compile of definitions1.sv failed with 2 errors.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv was successful with warnings.
-# 5 compiles, 1 failed with 2 errors.
+# 5 compiles, 0 failed with no errors.
+vsim -c -do "run -all" +in_file=trace.txt +out_file=output.txt +debug=0 memory_scheduler
+# vsim -c -do "run -all" "+in_file=trace.txt" "+out_file=output.txt" "+debug=0" memory_scheduler 
+# Start time: 23:25:44 on Dec 02,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(44): (vopt-2240) Treating stand-alone use of function 'read_from_file' as an implicit VOID cast.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.declarations1(fast)
+# Loading work.declarations0(fast)
+# Loading work.definitions0(fast)
+# Loading work.definitions1(fast)
+# Loading work.memory_scheduler(fast)
+# ** Warning: (vsim-8386) Illegal assignment to type 'enum bit[1:0] declarations0::oper' from type 'bit[1:0]': An enum variable may only be assigned the same enum typed variable or one of its values.
+#    Time: 0 ns  Iteration: 0  Region: /definitions1 File: N:/MSD/Nandini/MSD-final-Project/definitions1.sv Line: 41
+# run -all
+# End of simulation of trace.txt.txt

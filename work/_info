@@ -1,6 +1,8 @@
 m255
 K4
 z2
+!s12c _opt
+Z0 !s99 nomlopt
 !s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -9,137 +11,149 @@ z2
 !i10f 100
 cModel Technology
 dN:/MSD/deepthi/MSD-final-Project
+T_opt
+!s110 1701588345
+VBjYc[4z6KID<LVA;m6_4U3
+04 16 4 work memory_scheduler fast 0
+=1-989096a4dc48-656c2d78-35d-22b8
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
 Xdeclarations0
-2N:\MSD\deepthi\MSD-final-Project\declarations0.sv
-Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z1 !s110 1701495496
+2N:/MSD/deepthi/MSD-final-Project/declarations0.sv
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1701588241
 !i10b 1
-!s100 ?1DEgIDzhjiF@m`F?]iFI0
-IB9V:`Ta;;OLdBjYSV=gf90
+!s100 1M^R]m>AJW<?U8jIMf09j1
+IDh:ZF1L=;nIY=d>^]g:Fo3
 S1
-Z2 dN:/MSD/Nandini/MSD-final-Project
-Z3 w1701494232
-8N:\MSD\deepthi\MSD-final-Project\declarations0.sv
-FN:\MSD\deepthi\MSD-final-Project\declarations0.sv
-!i122 78
-L0 1 0
-VB9V:`Ta;;OLdBjYSV=gf90
-Z4 OL;L;2023.3;77
+Z4 dN:/MSD/Nandini/MSD-final-Project
+Z5 w1701587630
+8N:/MSD/deepthi/MSD-final-Project/declarations0.sv
+FN:/MSD/deepthi/MSD-final-Project/declarations0.sv
+!i122 87
+Z6 L0 1 0
+VDh:ZF1L=;nIY=d>^]g:Fo3
+Z7 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z5 !s108 1701495495.000000
-!s107 N:\MSD\deepthi\MSD-final-Project\declarations0.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:\MSD\deepthi\MSD-final-Project\declarations0.sv|
+Z8 !s108 1701588240.000000
+!s107 N:/MSD/deepthi/MSD-final-Project/declarations0.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD/deepthi/MSD-final-Project/declarations0.sv|
 !i113 0
-Z6 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z7 tCvgOpt 0
+Z9 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
 Xdeclarations1
 2N:/MSD/Nandini/MSD-final-Project/declarations1.sv
-R0
-!s110 1701495495
-!i10b 1
-!s100 Lz:G6L4QhZb[8MDejg=P92
-IO<B4M:ID]1bWBcICXl`SX0
-S1
 R2
-w1701485621
+Z10 !s110 1701588240
+!i10b 1
+!s100 F^4ajP>@ZRM0Z_cei<d?P0
+IhBedYoZIMi9EW]RE6DB662
+S1
+R4
+w1701588045
 8N:/MSD/Nandini/MSD-final-Project/declarations1.sv
 FN:/MSD/Nandini/MSD-final-Project/declarations1.sv
-!i122 77
-Z8 L0 2 0
-VO<B4M:ID]1bWBcICXl`SX0
-R4
+!i122 85
+L0 2 0
+VhBedYoZIMi9EW]RE6DB662
+R7
 r1
 !s85 0
 31
-R5
+R8
 !s107 N:/MSD/Nandini/MSD-final-Project/declarations1.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD/Nandini/MSD-final-Project/declarations1.sv|
 !i113 0
-R6
-R7
-Xdefinitions0
-2N:\MSD\deepthi\MSD-final-Project\definitions0.sv
-R0
-Z9 DXx4 work 13 declarations0 0 22 B9V:`Ta;;OLdBjYSV=gf90
-Z10 DXx4 work 13 declarations1 0 22 O<B4M:ID]1bWBcICXl`SX0
+R9
 R1
-!i10b 1
-!s100 Z;7KEUEMS7I8c3;WBVP5R0
-IXHA>0cWh??XZL8Co9;PFa1
-S1
+Xdefinitions0
+2N:/MSD/deepthi/MSD-final-Project/definitions0.sv
 R2
+Z11 DXx4 work 13 declarations0 0 22 Dh:ZF1L=;nIY=d>^]g:Fo3
+Z12 DXx4 work 13 declarations1 0 22 hBedYoZIMi9EW]RE6DB662
 R3
-8N:\MSD\deepthi\MSD-final-Project\definitions0.sv
-FN:\MSD\deepthi\MSD-final-Project\definitions0.sv
-!i122 79
-L0 3 0
-VXHA>0cWh??XZL8Co9;PFa1
+!i10b 1
+!s100 XmhU6]G`m<1ChMZAaD>593
+IaCQMeCC=mVBnXzh_J`PNc0
+S1
 R4
+R5
+8N:/MSD/deepthi/MSD-final-Project/definitions0.sv
+FN:/MSD/deepthi/MSD-final-Project/definitions0.sv
+!i122 88
+L0 3 0
+VaCQMeCC=mVBnXzh_J`PNc0
+R7
 r1
 !s85 0
 31
-Z11 !s108 1701495496.000000
-!s107 N:\MSD\deepthi\MSD-final-Project\definitions0.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:\MSD\deepthi\MSD-final-Project\definitions0.sv|
+Z13 !s108 1701588241.000000
+!s107 N:/MSD/deepthi/MSD-final-Project/definitions0.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD/deepthi/MSD-final-Project/definitions0.sv|
 !i113 0
-R6
-R7
+R9
+R1
 Xdefinitions1
 2N:\MSD\Nandini\MSD-final-Project\definitions1.sv
-R0
-DXx4 work 13 declarations0 0 22 <014EnI8d9T?@TU?He?]82
-DXx4 work 13 declarations1 0 22 lAdEW::8YXlNmg2<YPFU[2
-DXx4 work 12 definitions0 0 22 fJNfdW<?cKR7`jKXNmgAf3
-!s110 1701478497
-!i10b 1
-!s100 2:7Ae3NN3H]dG?04a<RXC1
-I_a5Y@HmT:@gRbzF6I<T0E0
-S1
 R2
-w1701478235
+R11
+R12
+Z14 DXx4 work 12 definitions0 0 22 aCQMeCC=mVBnXzh_J`PNc0
+R10
+!i10b 1
+!s100 59Kbz`X[Q`jZ[^Lf2XYa32
+IP:@7Qd`8J2GEgM@2Y_@eY2
+S1
+R4
+w1701588131
 8N:\MSD\Nandini\MSD-final-Project\definitions1.sv
 FN:\MSD\Nandini\MSD-final-Project\definitions1.sv
-!i122 42
-R8
-V_a5Y@HmT:@gRbzF6I<T0E0
-R4
+!i122 86
+R6
+VP:@7Qd`8J2GEgM@2Y_@eY2
+R7
 r1
 !s85 0
 31
-!s108 1701478497.000000
+R8
 !s107 N:\MSD\Nandini\MSD-final-Project\definitions1.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:\MSD\Nandini\MSD-final-Project\definitions1.sv|
 !i113 0
-R6
-R7
+R9
+R1
 vmemory_scheduler
 2N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv
-R0
-R9
-R10
-DXx4 work 12 definitions0 0 22 XHA>0cWh??XZL8Co9;PFa1
-DXx4 work 12 definitions1 0 22 _a5Y@HmT:@gRbzF6I<T0E0
-R1
-!i10b 1
-!s100 VSk8Iamilg]3>mg`2XHdf3
-I1o<2MezOY0Q7FU?c>inU>0
-S1
 R2
+R11
+R12
+R14
+DXx4 work 12 definitions1 0 22 P:@7Qd`8J2GEgM@2Y_@eY2
 R3
+!i10b 1
+!s100 iY>hR6RcZnbN`bYGGbzlf0
+I9FhQJjWZ:N:>S2lfbJQ[h1
+S1
+R4
+w1701585711
 8N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv
 FN:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv
-!i122 80
-L0 1 59
+!i122 89
+L0 1 93
 VDg1SIo80bB@j0V0VzS_@n1
-R4
+R7
 r1
 !s85 0
 31
-R11
+R13
 !s107 N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv|
 !i113 0
-R6
-R7
+R9
+R1

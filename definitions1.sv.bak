@@ -27,7 +27,7 @@ function size_queue();
 	if (queue_main.size() < MAX_QUEUE_SIZE && request_pending == 1) begin
 	  return 1;
 	end else begin 
-if(debug == 2)
+	if(debug == 2)
 	 $display("Cannot enqueue new request. Queue_size=%0d, request_pending=%0d",queue_main.size(),request_pending);
 		return 0;
 	end
@@ -41,8 +41,8 @@ function push_queue();
 	request.operation = in_data.operation;
 	queue_main.push_back(request);
 	request_pending =0;
-            $display("[%0d] Pushed request: Core %0p", clock, request);
             if (debug) begin
+		$display("[%0d] Pushed request: Core %0p", clock, request);
                 print_queue_contents(); // Print queue contents after insertion
             end         
 endfunction
