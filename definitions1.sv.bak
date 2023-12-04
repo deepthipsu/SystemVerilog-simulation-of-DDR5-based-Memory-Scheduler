@@ -191,7 +191,9 @@ endfunction
 
 // Function for update counter 
 function void update_counters();
-  clock++;
+
+  for (int i; i < queue_main.size; i++)
+  begin
 	queue_main[0].tp.tRC = (queue_main[0].tp.tRC == 0)?  queue_main[0].tp.tRC: queue_main[0].tp.tRC - 1;
 	queue_main[0].tp.tRAS = (queue_main[0].tp.tRAS == 0)? queue_main[0].tp.tRAS : queue_main[0].tp.tRAS-1;
 	queue_main[0].tp.tRRD_L = (queue_main[0].tp.tRRD_L == 0)? queue_main[0].tp.tRRD_L : queue_main[0].tp.tRRD_L-1;
@@ -213,9 +215,9 @@ function void update_counters();
 	queue_main[0].tp.tCCD_L_WTR = (queue_main[0].tp.tCCD_L_WTR == 0)?  queue_main[0].tp.tCCD_L_WTR: queue_main[0].tp.tCCD_L_WTR-1;
 	queue_main[0].tp.tCCD_S_WTR = (queue_main[0].tp.tCCD_S_WTR == 0)?  queue_main[0].tp.tCCD_S_WTR: queue_main[0].tp.tCCD_S_WTR-1;
 
-if(debug == 1)
-	$display("next cycle: clock - %d \n queue_main[0], %p", clock, queue_main[0]);
-
+  	if(debug == 1)
+		$display("next cycle: clock - %d \n queue_main[0], %p", clock, queue_main[0]);
+  end
 endfunction
 
 endpackage

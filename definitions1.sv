@@ -191,32 +191,32 @@ endfunction
 
 // Function for update counter 
 function void update_counters();
-  clock++;
-  if (queue_main.size() > 0)
+
+  for (int i; i < queue_main.size; i++)
   begin
-	queue_main[0].tp.tRC = (queue_main[0].tp.tRC == 0)?  queue_main[0].tp.tRC: queue_main[0].tp.tRC - 1;
-	queue_main[0].tp.tRAS = (queue_main[0].tp.tRAS == 0)? queue_main[0].tp.tRAS : queue_main[0].tp.tRAS-1;
-	queue_main[0].tp.tRRD_L = (queue_main[0].tp.tRRD_L == 0)? queue_main[0].tp.tRRD_L : queue_main[0].tp.tRRD_L-1;
-	queue_main[0].tp.tRRD_S = (queue_main[0].tp.tRRD_S == 0)? queue_main[0].tp.tRRD_S : queue_main[0].tp.tRRD_S-1;
-	queue_main[0].tp.tRP = (queue_main[0].tp.tRP == 0)?  queue_main[0].tp.tRP: queue_main[0].tp.tRP-1;
-	queue_main[0].tp.tRFC = (queue_main[0].tp.tRFC == 0)? queue_main[0].tp.tRFC : queue_main[0].tp.tRFC-1;
-	queue_main[0].tp.tCWD = (queue_main[0].tp.tCWD == 0)?  queue_main[0].tp.tCWD: queue_main[0].tp.tCWD-1;
-	queue_main[0].tp.tCL = (queue_main[0].tp.tCL == 0)?  queue_main[0].tp.tCL: queue_main[0].tp.tCL-1;
-	queue_main[0].tp.tRCD = (queue_main[0].tp.tRCD == 0)?  queue_main[0].tp.tRCD: queue_main[0].tp.tRCD-1;
-	queue_main[0].tp.tWR = (queue_main[0].tp.tWR == 0)?  queue_main[0].tp.tWR: queue_main[0].tp.tWR-1;
-	queue_main[0].tp.tRTP = (queue_main[0].tp.tRTP == 0)?  queue_main[0].tp.tRTP: queue_main[0].tp.tRTP-1;
-	queue_main[0].tp.tCCD_L = (queue_main[0].tp.tCCD_L == 0)?  queue_main[0].tp.tCCD_L: queue_main[0].tp.tCCD_L-1;
-	queue_main[0].tp.tCCD_S = (queue_main[0].tp.tCCD_S == 0)?  queue_main[0].tp.tCCD_S: queue_main[0].tp.tCCD_S-1;
-	queue_main[0].tp.tCCD_L_WR = (queue_main[0].tp.tCCD_L_WR == 0)?  queue_main[0].tp.tCCD_L_WR: queue_main[0].tp.tCCD_L_WR-1;
-	queue_main[0].tp.tCCD_S_WR = (queue_main[0].tp.tCCD_S_WR == 0)?  queue_main[0].tp.tCCD_S_WR: queue_main[0].tp.tCCD_S_WR-1;
-	queue_main[0].tp.tBURST = (queue_main[0].tp.tBURST == 0)?  queue_main[0].tp.tBURST: queue_main[0].tp.tBURST-1;
-	queue_main[0].tp.tCCD_L_RTW = (queue_main[0].tp.tCCD_L_RTW == 0)?  queue_main[0].tp.tCCD_L_RTW: queue_main[0].tp.tCCD_L_RTW-1;
-	queue_main[0].tp.tCCD_S_RTW = (queue_main[0].tp.tCCD_S_RTW == 0)?  queue_main[0].tp.tCCD_S_RTW: queue_main[0].tp.tCCD_S_RTW-1;
-	queue_main[0].tp.tCCD_L_WTR = (queue_main[0].tp.tCCD_L_WTR == 0)?  queue_main[0].tp.tCCD_L_WTR: queue_main[0].tp.tCCD_L_WTR-1;
-	queue_main[0].tp.tCCD_S_WTR = (queue_main[0].tp.tCCD_S_WTR == 0)?  queue_main[0].tp.tCCD_S_WTR: queue_main[0].tp.tCCD_S_WTR-1;
+	queue_main[i].tp.tRC = (queue_main[i].tp.tRC == 0)?  queue_main[i].tp.tRC: queue_main[i].tp.tRC - 1;
+	queue_main[i].tp.tRAS = (queue_main[i].tp.tRAS == 0)? queue_main[i].tp.tRAS : queue_main[i].tp.tRAS-1;
+	queue_main[i].tp.tRRD_L = (queue_main[i].tp.tRRD_L == 0)? queue_main[i].tp.tRRD_L : queue_main[i].tp.tRRD_L-1;
+	queue_main[i].tp.tRRD_S = (queue_main[i].tp.tRRD_S == 0)? queue_main[i].tp.tRRD_S : queue_main[i].tp.tRRD_S-1;
+	queue_main[i].tp.tRP = (queue_main[i].tp.tRP == 0)?  queue_main[i].tp.tRP: queue_main[i].tp.tRP-1;
+	queue_main[i].tp.tRFC = (queue_main[i].tp.tRFC == 0)? queue_main[i].tp.tRFC : queue_main[i].tp.tRFC-1;
+	queue_main[i].tp.tCWD = (queue_main[i].tp.tCWD == 0)?  queue_main[i].tp.tCWD: queue_main[i].tp.tCWD-1;
+	queue_main[i].tp.tCL = (queue_main[i].tp.tCL == 0)?  queue_main[i].tp.tCL: queue_main[i].tp.tCL-1;
+	queue_main[i].tp.tRCD = (queue_main[i].tp.tRCD == 0)?  queue_main[i].tp.tRCD: queue_main[i].tp.tRCD-1;
+	queue_main[i].tp.tWR = (queue_main[i].tp.tWR == 0)?  queue_main[i].tp.tWR: queue_main[i].tp.tWR-1;
+	queue_main[i].tp.tRTP = (queue_main[i].tp.tRTP == 0)?  queue_main[i].tp.tRTP: queue_main[i].tp.tRTP-1;
+	queue_main[i].tp.tCCD_L = (queue_main[i].tp.tCCD_L == 0)?  queue_main[i].tp.tCCD_L: queue_main[i].tp.tCCD_L-1;
+	queue_main[i].tp.tCCD_S = (queue_main[i].tp.tCCD_S == 0)?  queue_main[i].tp.tCCD_S: queue_main[i].tp.tCCD_S-1;
+	queue_main[i].tp.tCCD_L_WR = (queue_main[i].tp.tCCD_L_WR == 0)?  queue_main[i].tp.tCCD_L_WR: queue_main[i].tp.tCCD_L_WR-1;
+	queue_main[i].tp.tCCD_S_WR = (queue_main[i].tp.tCCD_S_WR == 0)?  queue_main[i].tp.tCCD_S_WR: queue_main[i].tp.tCCD_S_WR-1;
+	queue_main[i].tp.tBURST = (queue_main[i].tp.tBURST == 0)?  queue_main[i].tp.tBURST: queue_main[i].tp.tBURST-1;
+	queue_main[i].tp.tCCD_L_RTW = (queue_main[i].tp.tCCD_L_RTW == 0)?  queue_main[i].tp.tCCD_L_RTW: queue_main[i].tp.tCCD_L_RTW-1;
+	queue_main[i].tp.tCCD_S_RTW = (queue_main[i].tp.tCCD_S_RTW == 0)?  queue_main[i].tp.tCCD_S_RTW: queue_main[i].tp.tCCD_S_RTW-1;
+	queue_main[i].tp.tCCD_L_WTR = (queue_main[i].tp.tCCD_L_WTR == 0)?  queue_main[i].tp.tCCD_L_WTR: queue_main[i].tp.tCCD_L_WTR-1;
+	queue_main[i].tp.tCCD_S_WTR = (queue_main[i].tp.tCCD_S_WTR == 0)?  queue_main[i].tp.tCCD_S_WTR: queue_main[i].tp.tCCD_S_WTR-1;
 
   	if(debug == 1)
-		$display("next cycle: clock - %d \n queue_main[0], %p", clock, queue_main[0]);
+		$display("next cycle: clock - %d \n queue_main[i], %d, %p", clock, i, queue_main[i]);
   end
 endfunction
 
