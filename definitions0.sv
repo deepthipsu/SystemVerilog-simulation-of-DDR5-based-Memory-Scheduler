@@ -110,4 +110,18 @@ $fclose(in_file);
 
 endfunction
 
+
+function void inc_clk();
+
+if(queue_main.size() == 0 && !$feof(in_file) && request_pending == 0)
+	begin
+		clock = clock + in_data.cpu_cycles;
+	end
+else
+	begin
+		clock++;
+	end
+
+endfunction
+
 endpackage

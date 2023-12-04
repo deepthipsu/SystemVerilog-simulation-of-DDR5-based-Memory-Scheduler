@@ -60,6 +60,16 @@ begin: while_done
 		end : normal_process
 	end: DIMM_Clk 
 
+
+
+	// Update timing parameters and Empty queue if there are any entries in queue
+	if (queue_main.size() > 0)
+	begin
+		update_counters();  	// Decrement timing parameter values
+		pop_queue();		// Delete processed items from queue
+	end
+
+
 	// Check CPU clock and push queue
 	if(in_data.cpu_cycles <= clock)	
 	begin : time_check
@@ -70,9 +80,6 @@ begin: while_done
 		end : size_of_queue
 	end : time_check
 
-	// check and delete finished items from queue
-	if (queue_main.size() > 0)
-		pop_queue();
 
 	// Setting done bit at the end of simulation	
 	if(queue_main.size() == 0 && $feof(in_file) && request_pending == 0)
@@ -82,9 +89,10 @@ begin: while_done
 		continue;
 	end : set_done
 
-	// Increment clock and decrement timing parameter values
-	update_counters();
 
+	
+	// Increment clock for next cycle
+	clock++;
 end: while_done
         
 $display("End of simulation of %s", in_filename);

@@ -58,7 +58,7 @@ function void address_mapping (input bit [33:0]address,
 
 mapped_add = address;
 
-if(debug == 'd5)
+if(debug == 5)
 begin
 	$display("address %h, mapped add %p", address, mapped_add);
 end
@@ -107,6 +107,20 @@ function void close_files();
 
 $fclose(out_file);
 $fclose(in_file);
+
+endfunction
+
+
+function void inc_clk();
+
+if(queue_main.size() == 0 && !$feof(in_file) && request_pending == 0)
+	begin
+		clock = clock + 
+	end
+else
+	begin
+		clock++;
+	end
 
 endfunction
 
