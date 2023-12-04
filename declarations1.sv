@@ -3,7 +3,7 @@ package declarations1;
 
 bit [5:0] MAX_QUEUE_SIZE = 'd16;
 
-parameter [7:0] tRC=228;
+parameter [7:0] tRC=226;
 parameter [7:0] tRAS=152;
 parameter [4:0] tRRD_L=22;
 parameter [4:0] tRRD_S=14;
