@@ -1,0 +1,15 @@
+N:/MSD/nandini/MSD-final-Project/declarations1.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/nandini/MSD-final-Project/declarations1.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package declarations1
+
+Top level modules:
+	--none--
+
+} {} {}} N:/MSD/deepthi/MSD-final-Project/test.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD/deepthi/MSD-final-Project/test.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}}
