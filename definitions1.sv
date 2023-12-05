@@ -11,6 +11,8 @@ function read_from_file(string in_filename);
 	begin
             	if ($fgets(line, in_file)) 
 		begin
+			while(line =="\n" || line =="\t\n" || line == "\n")
+			  $fgets(line,in_file);
                 	num_entries = $sscanf(line, "%d %d %d %h", in_data.cpu_cycles, in_data.core , in_data.operation, in_data.address);
 			if (num_entries == 4)  // Check if all items were successfully parsed
 				begin

@@ -20,7 +20,7 @@ function read_from_file(string in_filename);
 			else 
 				begin
 		   			$display("Error: mismatched input arguments in %s after clock %d", in_filename, clock);
-            	    			$finish;
+            	    			return 0;
 		   		end  
 		  
                 end                
