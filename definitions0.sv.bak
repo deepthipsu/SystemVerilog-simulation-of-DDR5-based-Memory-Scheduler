@@ -58,10 +58,10 @@ function void address_mapping (input bit [33:0]address,
 
 mapped_add = address;
 
-if(debug == 5)
-begin
-	$display("address %h, mapped add %p", address, mapped_add);
-end
+if(debug == 2)
+	begin
+		$display("clock %d, address %h, mapped add %p", clock, address, mapped_add);
+	end
 
 endfunction
 
@@ -73,7 +73,7 @@ begin
 	if (!(|queue_main[0].tp))
 	begin
 		queue_pop_entry = queue_main.pop_front();
-		if(debug == 3)
+		if(debug == 4)
 		begin
 			$display(" queue_main[0].tp = %p", &queue_main[0].tp);
 			$display("clock - %d , Deleted entry from queue - %p", clock, queue_pop_entry);
@@ -86,27 +86,31 @@ endfunction
 // Function to add entries to output file
 function void out_file_upd(input queue_structure o, input bit [63:0] clock);
 
-// out_file=$fopen("dram.txt","w");
 $fwrite(out_file, " %d\t%d\t%p\t%p\t%p\t", clock, o.mapped_add.channel, o.curr_cmd, o.mapped_add.bank_group, o.mapped_add.bank);   
 if(o.curr_cmd == PRE)
-begin : none
-$fwrite(out_file, " \n");
-end : none
+	begin : none
+		$fwrite(out_file, " \n");
+	end : none
 else if(o.curr_cmd == ACT0 || o.curr_cmd == ACT1)
-begin : row
-$fwrite(out_file, " %h\n", o.mapped_add.row);  
-end : row
+	begin : row
+		$fwrite(out_file, " %h\n", o.mapped_add.row);  
+	end : row
 else
-begin : col
-$fwrite(out_file, " %h\n", {o.mapped_add.col_high, o.mapped_add.col_low});  
-end : col
+	begin : col
+		$fwrite(out_file, " %h\n", {o.mapped_add.col_high, o.mapped_add.col_low});  
+	end : col
 
 endfunction
 
-function void close_files();
+function close_files();
 
-$fclose(out_file);
-$fclose(in_file);
+int close;
+
+close = $fclose(out_file);
+if(close)
+	close = $fclose(in_file);
+
+return close;
 
 endfunction
 
@@ -115,7 +119,7 @@ function void inc_clk();
 
 if(queue_main.size() == 0 && !$feof(in_file) && request_pending == 0)
 	begin
-		clock = clock + 
+		clock = clock + in_data.cpu_cycles;
 	end
 else
 	begin

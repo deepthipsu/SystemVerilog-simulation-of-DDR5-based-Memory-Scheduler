@@ -70,15 +70,21 @@ begin: while_done
 	end
 
 
+
 	// Check CPU clock and push queue
 	if(in_data.cpu_cycles <= clock)	
 	begin : time_check
 		if(size_queue())
 		begin: size_of_queue
 			push_queue();
-			read_from_file(in_filename);
+			if ( !read_from_file(in_filename))
+			begin
+				$display("Errors reading input file");
+				$finish;
+			end
 		end : size_of_queue
 	end : time_check
+
 
 
 	// Setting done bit at the end of simulation	
@@ -92,7 +98,8 @@ begin: while_done
 
 	
 	// Increment clock for next cycle
-	clock++;
+	inc_clk();
+
 end: while_done
         
 $display("End of simulation of %s", in_filename);

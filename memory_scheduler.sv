@@ -45,18 +45,11 @@ begin: while_done
 			open_command(queue_main[0]); end
 		else
 		begin : normal_process
-			//if (queue_main[0].open_cmd == NULL)
-			//begin : proceed_next_cmd
 				open_command(queue_main[0]);
 				if (next_command(queue_main[0]))
 				begin : next_command1
 					out_file_upd(queue_main[0], clock);
 				end : next_command1
-			//end : proceed_next_cmd
-			//else
-			//begin : open_cmd
-			//	open_command(queue_main[0]);
-			//end : open_cmd
 		end : normal_process
 	end: DIMM_Clk 
 
@@ -77,7 +70,11 @@ begin: while_done
 		if(size_queue())
 		begin: size_of_queue
 			push_queue();
-			read_from_file(in_filename);
+			if ( !read_from_file(in_filename))
+			begin
+				$display("Errors reading input file");
+				$finish;
+			end
 		end : size_of_queue
 	end : time_check
 
