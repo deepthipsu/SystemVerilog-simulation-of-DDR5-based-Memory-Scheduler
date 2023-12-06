@@ -1,66 +1,6 @@
 # Compile of declarations1.sv was successful.
-# Compile of definitions1.sv was successful with warnings.
-# Compile of declarations0.sv was successful.
-# Compile of definitions0.sv was successful.
-# Compile of memory_scheduler.sv was successful.
-# 5 compiles, 0 failed with no errors.
-vsim -c -do "run -all" +in_file=trace.txt +out_file=test_op.txt +debug=0 memory_scheduler
-# vsim -c -do "run -all" "+in_file=trace.txt" "+out_file=test_op.txt" "+debug=0" memory_scheduler 
-# Start time: 12:50:01 on Dec 05,2023
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading sv_std.std
-# Loading work.declarations1(fast)
-# Loading work.declarations0(fast)
-# Loading work.definitions0(fast)
-# Loading work.definitions1(fast)
-# Loading work.memory_scheduler(fast)
-# run -all
-# Error: mismatched input arguments in trace.txt after clock                    7
-# Errors reading input file
-# ** Note: $finish    : N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(76)
-#    Time: 0 ns  Iteration: 0  Instance: /memory_scheduler
-# 1
-# Break at N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv line 76
-# Compile of declarations1.sv was successful.
 # Compile of definitions1.sv was successful.
 # Compile of declarations0.sv was successful.
 # Compile of definitions0.sv was successful.
 # Compile of memory_scheduler.sv was successful.
 # 5 compiles, 0 failed with no errors.
-vsim -c -do "run -all" +in_file=trace.txt +out_file=test_op.txt +debug=0 memory_scheduler
-# End time: 12:55:08 on Dec 05,2023, Elapsed time: 0:05:07
-# Errors: 0, Warnings: 7
-# vsim -c -do "run -all" "+in_file=trace.txt" "+out_file=test_op.txt" "+debug=0" memory_scheduler 
-# Start time: 12:55:08 on Dec 05,2023
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.declarations1(fast)
-# Loading work.declarations0(fast)
-# Loading work.definitions0(fast)
-# Loading work.definitions1(fast)
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
-#    Time: 0 ns  Iteration: 0  Region: /definitions1::read_from_file File: N:/MSD/Nandini/MSD-final-Project/definitions1.sv Line: 15
-# Loading work.memory_scheduler(fast)
-# run -all
-# End of simulation of trace.txt
-vsim -c -do "run -all" +in_file=trace.txt +out_file=test_op.txt +debug=0 memory_scheduler
-# End time: 12:56:12 on Dec 05,2023, Elapsed time: 0:01:04
-# Errors: 0, Warnings: 2
-# vsim -c -do "run -all" "+in_file=trace.txt" "+out_file=test_op.txt" "+debug=0" memory_scheduler 
-# Start time: 12:56:12 on Dec 05,2023
-# ** Note: (vsim-8009) Loading existing optimized design _opt3
-# Loading sv_std.std
-# Loading work.declarations1(fast)
-# Loading work.declarations0(fast)
-# Loading work.definitions0(fast)
-# Loading work.definitions1(fast)
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
-#    Time: 0 ns  Iteration: 0  Region: /definitions1::read_from_file File: N:/MSD/Nandini/MSD-final-Project/definitions1.sv Line: 15
-# Loading work.memory_scheduler(fast)
-# run -all
-# Error: mismatched input arguments in trace.txt after clock                 2535
-# Errors reading input file
-# ** Note: $finish    : N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv(76)
-#    Time: 0 ns  Iteration: 0  Instance: /memory_scheduler
-# 1
-# Break at N:/MSD/deepthi/MSD-final-Project/memory_scheduler.sv line 76

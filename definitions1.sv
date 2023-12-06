@@ -49,7 +49,7 @@ endfunction
 function void push_queue();
 
 	address_mapping(in_data.address, request.mapped_add); 
-	request.cpu_cycles = in_data.operation;
+	request.cpu_cycles = in_data.cpu_cycles;
 	request.operation = in_data.operation;
 	queue_main.push_back(request);
 	request_pending =0;
