@@ -10,6 +10,7 @@ Tool				: Questasim
 Policy				: Closed Page Policy
 Execution of input requests: In Order Execution
 
+
 Code Implementation:
 Main module starts with initial block
 First open files (both input and output) and read a line from input file
@@ -21,7 +22,20 @@ Close files if queue is empty, end of input file is reached and no more pending 
 Increment clock if processing is still to be done. Jump to next time if no more commands to be processed and end of file not reached.
 
 
-
 Test Plan: 
 Approach to generate input file addresses: SV module
 Testmodule which displays the formatted 34 bit hex address from the provided combination of address components. Used it to update the excel spreadsheet with the required combination of testcases.
+
+Mode of Execution:
+Command Line - with makefile
+command:
+vsim -c -do "run -all" +in_file=testcase2.txt +out_file=output2.txt +debug=0 memory_scheduler
+
+Executable files created:
+memory_scheduler.sv - main module which calls the functions as required.
+declarations0.sv    - Package to declarations required by developer 1
+declarations1.sv    - Package for declarations of developer 2
+definitions0.sv     - Package with all the functions developed by developer 1
+definitions1.sv     - Package with all the functions developed by developer 2
+address_generator.sv- module to generate 34 bit hexadecimal address from bank, bank group and other combinations for testcase generation.
+
